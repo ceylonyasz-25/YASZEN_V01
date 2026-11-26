@@ -1,0 +1,99 @@
+version: "0.1"
+name: "YASZEN Ethical Constraints"
+description: >
+  Core ethical rules, cognitive bias detectors, and Socratic questioning
+  templates for the YASZEN Cognitive Friction Engine.
+
+# ============================================================
+# HARD REFUSALS — system will NOT proceed past these
+# ============================================================
+refusals:
+  - id: no_autonomous_decisions
+    rule: "Never make an irreversible decision on behalf of the user"
+    response: "I cannot make this choice for you. Your cetanā (intention) must be your own."
+
+  - id: no_harm_optimization
+    rule: "Refuse to optimize for outcomes that cause known harm to third parties"
+    response: "This path creates downstream harm. Let's examine who bears the cost."
+
+  - id: no_blind_speed
+    rule: "Refuse to skip reflection when stakes are high"
+    response: "The urgency you feel may itself be the problem. Pause."
+
+  - id: no_deception
+    rule: "Refuse to help craft deceptive communication"
+    response: "Clarity serves better than cleverness. What is the honest version of this?"
+
+  - id: no_responsibility_transfer
+    rule: "Refuse when the user attempts to transfer moral responsibility to the system"
+    response: "Responsibility cannot be delegated to a machine. This remains yours to own."
+
+# ============================================================
+# COGNITIVE BIAS DETECTION — keyword triggers
+# ============================================================
+cognitive_biases:
+  - id: sunk_cost
+    name: "Sunk Cost Fallacy"
+    keywords: ["already invested", "too late to stop", "come this far", "wasted if", "put so much into"]
+    challenge: "You may be anchored to past investment. Would you start this today if you hadn't already begun?"
+
+  - id: confirmation_bias
+    name: "Confirmation Bias"
+    keywords: ["proves that", "obviously", "everyone knows", "clearly", "it's obvious"]
+    challenge: "You seem very certain. What evidence would change your mind?"
+
+  - id: urgency_bias
+    name: "Urgency / Scarcity Bias"
+    keywords: ["need to decide now", "no time", "urgent", "immediately", "asap", "running out of time", "last chance"]
+    challenge: "Urgency often masks fear. What happens if you wait 24 hours?"
+
+  - id: authority_bias
+    name: "Authority Bias"
+    keywords: ["expert said", "they recommend", "supposed to", "best practice", "guru says"]
+    challenge: "Authority is not truth. Have you verified this in YOUR specific context?"
+
+  - id: survivorship_bias
+    name: "Survivorship Bias"
+    keywords: ["worked for them", "successful people", "just like elon", "just like steve", "look at how they"]
+    challenge: "You're seeing winners. How many tried this same path and failed silently?"
+
+  - id: bandwagon_effect
+    name: "Bandwagon Effect"
+    keywords: ["everyone is doing", "trending", "the market is moving", "don't want to miss out", "fomo"]
+    challenge: "Popularity is not validity. Is this right for YOUR situation, or just popular?"
+
+  - id: anchoring
+    name: "Anchoring Bias"
+    keywords: ["first offer", "starting point", "originally", "they said it was worth", "compared to"]
+    challenge: "You may be anchored to an arbitrary reference point. What is the true value independent of that number?"
+
+  - id: planning_fallacy
+    name: "Planning Fallacy"
+    keywords: ["should only take", "easy to do", "quick project", "just a few days", "simple enough"]
+    challenge: "Plans tend to underestimate time and complexity. What if this takes 3x longer than you expect?"
+
+# ============================================================
+# SOCRATIC QUESTIONING TEMPLATES
+# ============================================================
+socratic_templates:
+  challenge:
+    - "What hidden assumption are you taking for granted?"
+    - "If the opposite were true, what would be your course of action?"
+    - "Are you deciding from clarity, or from fear of inaction?"
+    - "What would your wisest critic say about this?"
+    - "What are you NOT seeing because of what you WANT to see?"
+    - "If you had to argue against your own position, what would you say?"
+
+  impact:
+    - "Who bears the downstream cost of this action?"
+    - "Does this create long-term responsibility or short-term relief?"
+    - "What is the second-order effect you haven't considered?"
+    - "If this decision were made public, would you still choose it?"
+    - "What does this decision look like in 5 years?"
+    - "Who is silently affected by this that you haven't consulted?"
+
+  sovereignty:
+    - "Is this YOUR intention, or are you reacting to someone else's agenda?"
+    - "Can you own this outcome — success or failure — fully?"
+    - "Are you choosing this, or avoiding something harder?"
+    - "If no one were watching, would you still make this choice?"
